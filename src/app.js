@@ -10,6 +10,10 @@ const publicDirectoryPath = path.join(__dirname,'../public')
 const  viewPath = path.join(__dirname,'../templates/views')
 const parialPath = path.join(__dirname,'../templates/partials')
 const app = express()
+/*port variable to run the application in heroku servers */
+/*env is variable to access the environment variable*/
+/* PORT is the access of environment variable */
+const port = process.env.PORT || 3000
  
 
 
@@ -144,7 +148,7 @@ app.get('/weather',(req,res)=>{
 
 //3000 is port number that express will use 
 */
-
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000.')
+/*the port 3000 is used when we start our application in our machine */ 
+app.listen(port,()=>{
+    console.log('Server is up on port '+port)
 })     
